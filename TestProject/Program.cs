@@ -1,24 +1,22 @@
-﻿/*string[] fraudulentOrderIDs = new string[3];
-fraudulentOrderIDs[0] = "A123";
-fraudulentOrderIDs[1] = "B456";
-fraudulentOrderIDs[2] = "C789";
-//fraudulentOrderIDs[3] = "D000";
-string[] fraudulentOrderIDs = ["A123", "B456", "C789"];
+﻿Random dice = new Random();
 
-Console.WriteLine($"First: {fraudulentOrderIDs[0]}");
-Console.WriteLine($"Second: {fraudulentOrderIDs[1]}");
-Console.WriteLine($"Third: {fraudulentOrderIDs[2]}");
+int roll1 = dice.Next(1, 7);
+int roll2 = dice.Next(1, 7);
+int roll3 = dice.Next(1, 7);
 
-fraudulentOrderIDs[0] = "F000";
-Console.WriteLine($"Reassign First: {fraudulentOrderIDs[0]}");
-Console.WriteLine($"There are {fraudulentOrderIDs.Length} fraudulent orders to process.");*/
-string[] fraudulentOrderIDs = ["B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179"];
-foreach (string orders in fraudulentOrderIDs)
+int total = roll1 + roll2 + roll3;
+Console.WriteLine($"Dice roll: {roll1} + {roll2} + {roll3} = {total}");
+
+if ((roll1 == roll2) || (roll2 == roll3) || (roll1 == roll3)) 
 {
-    if (orders.StartsWith("B"))
-
+    if ((roll1 == roll2) && (roll2 == roll3)) 
     {
-        Console.WriteLine(orders);
+        Console.WriteLine("You rolled triples!  +6 bonus to total!");
+        total += 6; 
+    } 
+    else 
+    {
+        Console.WriteLine("You rolled doubles!  +2 bonus to total!");
+        total += 2;
     }
 }
-
