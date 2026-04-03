@@ -287,6 +287,13 @@ do
 
         case "3":
             // Ensure animal ages and physical descriptions are complete
+                        for (int i = 0; i < maxPets; i++)
+            {
+                if (ourAnimals[i, 0] != "ID #: ")
+                {
+                    animalAge
+                }
+            }
             Console.WriteLine("Challenge Project - please check back soon to see progress.");
             Console.WriteLine("Press the Enter key to continue.");
             readResult = Console.ReadLine();
