@@ -1,13 +1,16 @@
-﻿string[] orderStream = ["B123","C234","A345","C15","B177","G3003","C235","B179"];
-Array.Sort(orderStream);
-foreach (var orders in orderStream)
-{
-    if(orders.Length == 4)
-    {
-        Console.WriteLine($"{orders}");
-    }   
-    else
-    {
-        Console.WriteLine($"{orders} - error");
-    }
-}
+﻿const string input = "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
+
+string quantity = "";
+string output = "";
+
+// Your work here
+int openingPosition = input.IndexOf("<span>");
+
+int closingPosition = input.IndexOf("</span>");
+openingPosition += 6;
+int length = closingPosition - openingPosition;
+Console.WriteLine("Quantity: "+ input.Substring(openingPosition, length));
+
+
+Console.WriteLine(quantity);
+Console.WriteLine(output);
